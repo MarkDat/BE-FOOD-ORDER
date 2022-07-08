@@ -16,15 +16,15 @@
     </ItemGroup>
 
     <ItemGroup>
-      <_ContentIncludedByDefault Remove="OrderFullfillment.API\appsettings.Development.json" />
-      <_ContentIncludedByDefault Remove="OrderFullfillment.API\appsettings.json" />
-      <_ContentIncludedByDefault Remove="OrderFullfillment.API\obj\OrderFullfillment.API.csproj.nuget.dgspec.json" />
-      <_ContentIncludedByDefault Remove="OrderFullfillment.API\obj\project.assets.json" />
-      <_ContentIncludedByDefault Remove="OrderFullfillment.API\obj\project.packagespec.json" />
-      <_ContentIncludedByDefault Remove="OrderFullfillment.API\Properties\launchSettings.json" />
-      <_ContentIncludedByDefault Remove="OrderFullfillment.Entities\obj\OrderFullfillment.Entities.csproj.nuget.dgspec.json" />
-      <_ContentIncludedByDefault Remove="OrderFullfillment.Entities\obj\project.assets.json" />
-      <_ContentIncludedByDefault Remove="OrderFullfillment.Entities\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="FoodOrder.API\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="FoodOrder.API\appsettings.json" />
+      <_ContentIncludedByDefault Remove="FoodOrder.API\obj\FoodOrder.API.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="FoodOrder.API\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="FoodOrder.API\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="FoodOrder.API\Properties\launchSettings.json" />
+      <_ContentIncludedByDefault Remove="FoodOrder.Entities\obj\FoodOrder.Entities.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="FoodOrder.Entities\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="FoodOrder.Entities\obj\project.packagespec.json" />
     </ItemGroup>
 
     <ItemGroup>

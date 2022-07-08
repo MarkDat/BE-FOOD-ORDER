@@ -27,7 +27,7 @@ namespace OrderFullfillment.API
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = "OderFullfillment", Version = "v1"});
+                c.SwaggerDoc("v1", new OpenApiInfo {Title = "FoodOrder", Version = "v1"});
             });
             services.AddDbContext<AppDbContext>(options => options.UseSqlite(_configuration["ConnectionString"]));
 
