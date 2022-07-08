@@ -3,15 +3,16 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using FoodOrder.Infrastructure.SeedWorks;
 using System.Collections.Generic;
+using FoodOrder.Entity.Contexts;
 
 namespace FoodOrder.Infrastructure
 {
     public sealed class UnitOfWork : IUnitOfWork, IDisposable
     {
-        private readonly AppDbContext _appDbContext;
+        private readonly FoodOrderContext _appDbContext;
         private Dictionary<string, object> Repositories { get; }
 
-        public UnitOfWork(AppDbContext appDbContext)
+        public UnitOfWork(FoodOrderContext appDbContext)
         {
             _appDbContext = appDbContext;
         }
@@ -63,19 +64,19 @@ namespace FoodOrder.Infrastructure
             GC.SuppressFinalize(this);
         }
 
-        public IRepository<TEntity> Repository<TEntity>() where TEntity : class
+        public IRepository<T> Repository<T>() where T : class
         {
-            var type = typeof(TEntity);
+            var type = typeof(T);
             var typeName = type.Name;
 
             lock (Repositories)
             {
                 if (Repositories.ContainsKey(typeName))
                 {
-                    return (IRepository<TEntity>)Repositories[typeName];
+                    return (IRepository<T>)Repositories[typeName];
                 }
 
-                var repository = new Repository<TEntity>(_appDbContext);
+                var repository = new Repository<T>(_appDbContext);
 
                 Repositories.Add(typeName, repository);
                 return repository;

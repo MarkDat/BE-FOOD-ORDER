@@ -39,16 +39,13 @@ namespace FoodOrder.API
             });
 
             // Add db context
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(AppSettings.ConnectionString));
+            services.AddDbContext<FoodOrderContext>(options => options.UseSqlServer(AppSettings.ConnectionString));
             services.AddScoped<Func<FoodOrderContext>>((provider) => () => provider.GetService<FoodOrderContext>());
 
             services
                 .AddScoped<IUnitOfWork, UnitOfWork>()
                 .AddScoped(typeof(IRepository<>), typeof(Repository<>))
-                .AddScoped<IBasketService, BasketService>()
-                .AddScoped<IOrderService, OrderService>()
-                .AddScoped<IProductService, ProductService>()
-                .AddScoped<IInvoiceService, InvoiceService>();
+                .AddScoped<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -4,20 +4,23 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using FoodOrder.Application.ViewModels.User;
 using FoodOrder.Infrastructure.SeedWorks;
+using FoodOrder.Entity.Entities;
+using System.Linq;
 
 namespace FoodOrder.Application.Services
 {
-    public class UserService : BaseService, IUser
+    public class UserService : BaseService, IUserService
     {
         public UserService(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
         }
 
-        public async Task<IList<UserResponseVM>> GetAll()
+        public async Task<IList<User>> GetAll()
         {
             return await UnitOfWork.ExecuteTransactionAsync(async () =>
             {
-                return new List<UserResponseVM>();
+                var users = await Repository<User>().GetAllAsync();
+                return users.ToList();
             });
         }
     }
