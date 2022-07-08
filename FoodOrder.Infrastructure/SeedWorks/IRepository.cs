@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace OrderFullfillment.Infrastructure.SeedWorks
+namespace FoodOrder.Infrastructure.SeedWorks
 {
     public interface IRepository<T> where T : class   
     {   

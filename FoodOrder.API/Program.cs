@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace OrderFullfillment.API
+namespace FoodOrder.API
 {
     public class Program
     {

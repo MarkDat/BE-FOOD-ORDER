@@ -1,8 +1,8 @@
 using System.Threading.Tasks;
-using OrderFullfillment.Application.ViewModels.Order;
-using OrderFullfillment.Entity.Entities.Orders;
+using FoodOrder.Application.ViewModels.Order;
+using FoodOrder.Entity.Entities.Orders;
 
-namespace OrderFullfillment.Application.Services.Interfaces
+namespace FoodOrder.Application.Services.Interfaces
 {
     public interface IOrderService
     {

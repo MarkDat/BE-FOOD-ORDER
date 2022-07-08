@@ -1,12 +1,12 @@
 using System.Linq;
 using System.Threading.Tasks;
-using OrderFullfillment.Application.SeedWorks;
-using OrderFullfillment.Application.Services.Interfaces;
-using OrderFullfillment.Entity.Entities;
-using OrderFullfillment.Entity.Entities.Basket;
-using OrderFullfillment.Infrastructure.SeedWorks;
+using FoodOrder.Application.SeedWorks;
+using FoodOrder.Application.Services.Interfaces;
+using FoodOrder.Entity.Entities;
+using FoodOrder.Entity.Entities.Basket;
+using FoodOrder.Infrastructure.SeedWorks;
 
-namespace OrderFullfillment.Application.Services
+namespace FoodOrder.Application.Services
 {
     public class BasketService : BaseService, IBasketService
     {

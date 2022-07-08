@@ -1,7 +1,7 @@
-using OrderFullfillment.Entity.Entities.Orders;
-using OrderFullfillment.Entity.SeedWorks;
+using FoodOrder.Entity.Entities.Orders;
+using FoodOrder.Entity.SeedWorks;
 
-namespace OrderFullfillment.Entity.Entities.Invoice
+namespace FoodOrder.Entity.Entities.Invoice
 {
     public abstract class InvoiceBase : EntityBase
     {

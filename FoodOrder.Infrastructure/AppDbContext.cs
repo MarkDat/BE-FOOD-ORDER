@@ -2,13 +2,13 @@ using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using OrderFullfillment.Entity.Entities;
-using OrderFullfillment.Entity.Entities.Basket;
-using OrderFullfillment.Entity.Entities.Invoice;
-using OrderFullfillment.Entity.Entities.Orders;
-using OrderFullfillment.Entity.SeedWorks;
+using FoodOrder.Entity.Entities;
+using FoodOrder.Entity.Entities.Basket;
+using FoodOrder.Entity.Entities.Invoice;
+using FoodOrder.Entity.Entities.Orders;
+using FoodOrder.Entity.SeedWorks;
 
-namespace OrderFullfillment.Infrastructure
+namespace FoodOrder.Infrastructure
 {
     public class AppDbContext : DbContext
     {

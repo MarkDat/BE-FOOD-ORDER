@@ -1,7 +1,7 @@
 
-using OrderFullfillment.Infrastructure.SeedWorks;
+using FoodOrder.Infrastructure.SeedWorks;
 
-namespace OrderFullfillment.Application.SeedWorks
+namespace FoodOrder.Application.SeedWorks
 {
     public abstract class BaseService
     {
@@ -10,6 +10,11 @@ namespace OrderFullfillment.Application.SeedWorks
         protected BaseService(IUnitOfWork unitOfWork)
         {
             UnitOfWork = unitOfWork;
+        }
+
+        protected IRepository<T> Repository<T>() where T : class
+        {
+            return UnitOfWork.Repository<T>();
         }
     }
 }

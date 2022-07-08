@@ -1,13 +1,15 @@
 using System;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using OrderFullfillment.Infrastructure.SeedWorks;
+using FoodOrder.Infrastructure.SeedWorks;
+using System.Collections.Generic;
 
-namespace OrderFullfillment.Infrastructure
+namespace FoodOrder.Infrastructure
 {
     public sealed class UnitOfWork : IUnitOfWork, IDisposable
     {
         private readonly AppDbContext _appDbContext;
+        private Dictionary<string, object> Repositories { get; }
 
         public UnitOfWork(AppDbContext appDbContext)
         {
@@ -29,6 +31,8 @@ namespace OrderFullfillment.Infrastructure
                     try
                     {
                         var result = await func.Invoke();
+
+                        await SaveChangeAsync();
                         await trans.CommitAsync();
                         return result;
                     }
@@ -58,5 +62,25 @@ namespace OrderFullfillment.Infrastructure
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
+        public IRepository<TEntity> Repository<TEntity>() where TEntity : class
+        {
+            var type = typeof(TEntity);
+            var typeName = type.Name;
+
+            lock (Repositories)
+            {
+                if (Repositories.ContainsKey(typeName))
+                {
+                    return (IRepository<TEntity>)Repositories[typeName];
+                }
+
+                var repository = new Repository<TEntity>(_appDbContext);
+
+                Repositories.Add(typeName, repository);
+                return repository;
+            }
+        }
     }
+
 }

@@ -1,6 +1,6 @@
-using OrderFullfillment.Entity;
+using FoodOrder.Entity;
 
-namespace OrderFullfillment.Application.ViewModels.Order
+namespace FoodOrder.Application.ViewModels.Order
 {
     public class OrderRequestVM
     {

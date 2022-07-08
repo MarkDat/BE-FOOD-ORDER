@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
-using OrderFullfillment.Entity.Entities.Basket;
+using FoodOrder.Entity.Entities.Basket;
 
-namespace OrderFullfillment.Application.Services.Interfaces
+namespace FoodOrder.Application.Services.Interfaces
 {
     public interface IBasketService
     {

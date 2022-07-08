@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
-using OrderFullfillment.Entity.SeedWorks;
+using FoodOrder.Entity.SeedWorks;
 
-namespace OrderFullfillment.Entity.Entities.Orders
+namespace FoodOrder.Entity.Entities.Orders
 {
     [Table("OrderProductItem")]
     public class OrderProductItem : EntityBase

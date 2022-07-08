@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
-using OrderFullfillment.Entity.Entities.Orders;
+using FoodOrder.Entity.Entities.Orders;
 
-namespace OrderFullfillment.Entity.Entities.Invoice
+namespace FoodOrder.Entity.Entities.Invoice
 {
     [Table("PersonalInvoice")]
     public class PersonalInvoice : InvoiceBase

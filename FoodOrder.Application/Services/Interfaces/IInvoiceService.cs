@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
-using OrderFullfillment.Entity.Entities.Orders;
+using FoodOrder.Entity.Entities.Orders;
 
-namespace OrderFullfillment.Application.Services.Interfaces
+namespace FoodOrder.Application.Services.Interfaces
 {
     public interface IInvoiceService
     {

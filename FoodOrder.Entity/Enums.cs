@@ -1,4 +1,4 @@
-namespace OrderFullfillment.Entity
+namespace FoodOrder.Entity
 {
     public enum OrderType
     {

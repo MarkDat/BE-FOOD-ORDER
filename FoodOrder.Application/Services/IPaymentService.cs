@@ -1,10 +1,10 @@
 using System.Threading.Tasks;
-using OrderFullfillment.Application.SeedWorks;
-using OrderFullfillment.Application.Services.Interfaces;
-using OrderFullfillment.Entity.Entities.Payment;
-using OrderFullfillment.Infrastructure.SeedWorks;
+using FoodOrder.Application.SeedWorks;
+using FoodOrder.Application.Services.Interfaces;
+using FoodOrder.Entity.Entities.Payment;
+using FoodOrder.Infrastructure.SeedWorks;
 
-namespace OrderFullfillment.Application.Services
+namespace FoodOrder.Application.Services
 {
     public class PaymentService : BaseService, IPaymentService
     {

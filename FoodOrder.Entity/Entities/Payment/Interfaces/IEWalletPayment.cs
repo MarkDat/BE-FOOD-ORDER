@@ -1,4 +1,4 @@
-namespace OrderFullfillment.Entity.Entities.Payment.Interfaces
+namespace FoodOrder.Entity.Entities.Payment.Interfaces
 {
     public interface IEWalletPayment: IPayment
     {

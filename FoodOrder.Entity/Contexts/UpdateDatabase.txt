@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "Data Source=DATLUONG-PC\DATL;Initial Catalog=FoodOrder;Persist Security Info=True;User ID=dl_food_order;Password=dl@123456" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entities -ContextDir Contexts -Context AppContext -f

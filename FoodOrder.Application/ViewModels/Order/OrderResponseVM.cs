@@ -1,4 +1,4 @@
-namespace OrderFullfillment.Application.ViewModels.Order
+namespace FoodOrder.Application.ViewModels.Order
 {
     public class OrderResponseVM
     {

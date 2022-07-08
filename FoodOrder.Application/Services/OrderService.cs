@@ -1,13 +1,13 @@
 using System.Threading.Tasks;
-using OrderFullfillment.Application.SeedWorks;
-using OrderFullfillment.Application.Services.Interfaces;
-using OrderFullfillment.Application.ViewModels.Order;
-using OrderFullfillment.Entity;
-using OrderFullfillment.Entity.Entities.Basket;
-using OrderFullfillment.Entity.Entities.Orders;
-using OrderFullfillment.Infrastructure.SeedWorks;
+using FoodOrder.Application.SeedWorks;
+using FoodOrder.Application.Services.Interfaces;
+using FoodOrder.Application.ViewModels.Order;
+using FoodOrder.Entity;
+using FoodOrder.Entity.Entities.Basket;
+using FoodOrder.Entity.Entities.Orders;
+using FoodOrder.Infrastructure.SeedWorks;
 
-namespace OrderFullfillment.Application.Services
+namespace FoodOrder.Application.Services
 {
     public class OrderService : BaseService, IOrderService
     {

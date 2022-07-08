@@ -1,11 +1,11 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using OrderFullfillment.Application.Services.Interfaces;
-using OrderFullfillment.Application.ViewModels.Order;
-using OrderFullfillment.Entity.Entities.Orders;
+using FoodOrder.Application.Services.Interfaces;
+using FoodOrder.Application.ViewModels.Order;
+using FoodOrder.Entity.Entities.Orders;
 
-namespace OrderFullfillment.API.Controllers
+namespace FoodOrder.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

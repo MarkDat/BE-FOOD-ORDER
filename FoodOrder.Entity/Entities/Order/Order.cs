@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using OrderFullfillment.Entity.SeedWorks;
+using FoodOrder.Entity.SeedWorks;
 
-namespace OrderFullfillment.Entity.Entities.Orders
+namespace FoodOrder.Entity.Entities.Orders
 {
     [Table("Order")]
     public class Order : EntityBase

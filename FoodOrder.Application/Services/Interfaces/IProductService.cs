@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
-using OrderFullfillment.Entity.Entities;
+using FoodOrder.Entity.Entities;
 
-namespace OrderFullfillment.Application.Services.Interfaces
+namespace FoodOrder.Application.Services.Interfaces
 {
     public interface IProductService
     {

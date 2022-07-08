@@ -1,6 +1,6 @@
-using OrderFullfillment.Entity.Entities.Payment.Interfaces;
+using FoodOrder.Entity.Entities.Payment.Interfaces;
 
-namespace OrderFullfillment.Entity.Entities.Payment
+namespace FoodOrder.Entity.Entities.Payment
 {
     public class EWalletPayment: IEWalletPayment
     {

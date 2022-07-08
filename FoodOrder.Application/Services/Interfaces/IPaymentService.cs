@@ -1,8 +1,8 @@
 using System.Threading.Tasks;
-using OrderFullfillment.Entity.Entities;
-using OrderFullfillment.Entity.Entities.Payment;
+using FoodOrder.Entity.Entities;
+using FoodOrder.Entity.Entities.Payment;
 
-namespace OrderFullfillment.Application.Services.Interfaces
+namespace FoodOrder.Application.Services.Interfaces
 {
     public interface IPaymentService
     {

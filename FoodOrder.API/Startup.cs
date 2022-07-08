@@ -1,5 +1,6 @@
 using FoodOrder.Application.ViewModels;
 using FoodOrder.Application.ViewModels.AppSetting;
+using FoodOrder.Entity.Contexts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -7,12 +8,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using OrderFullfillment.Application.Services;
-using OrderFullfillment.Application.Services.Interfaces;
-using OrderFullfillment.Infrastructure;
-using OrderFullfillment.Infrastructure.SeedWorks;
+using FoodOrder.Application.Services;
+using FoodOrder.Application.Services.Interfaces;
+using FoodOrder.Infrastructure;
+using FoodOrder.Infrastructure.SeedWorks;
+using System;
 
-namespace OrderFullfillment.API
+namespace FoodOrder.API
 {
     public class Startup
     {
@@ -35,7 +37,10 @@ namespace OrderFullfillment.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "FoodOrder", Version = "v1"});
             });
+
+            // Add db context
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(AppSettings.ConnectionString));
+            services.AddScoped<Func<FoodOrderContext>>((provider) => () => provider.GetService<FoodOrderContext>());
 
             services
                 .AddScoped<IUnitOfWork, UnitOfWork>()

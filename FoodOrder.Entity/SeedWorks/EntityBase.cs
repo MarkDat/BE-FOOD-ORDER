@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OrderFullfillment.Entity.SeedWorks
+namespace FoodOrder.Entity.SeedWorks
 {
     public abstract class EntityBase
     {

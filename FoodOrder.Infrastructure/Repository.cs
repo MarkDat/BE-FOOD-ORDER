@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using OrderFullfillment.Entity.SeedWorks;
-using OrderFullfillment.Infrastructure.SeedWorks;
+using FoodOrder.Entity.SeedWorks;
+using FoodOrder.Infrastructure.SeedWorks;
 
-namespace OrderFullfillment.Infrastructure
+namespace FoodOrder.Infrastructure
 {
     public class Repository<T> : IRepository<T> where T : class
     {
