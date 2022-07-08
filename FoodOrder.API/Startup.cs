@@ -1,3 +1,5 @@
+using FoodOrder.Application.ViewModels;
+using FoodOrder.Application.ViewModels.AppSetting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -17,6 +19,10 @@ namespace OrderFullfillment.API
         public Startup(IConfiguration configuration)
         {
             _configuration = configuration;
+            _configuration.GetSection("Configurations").Get<AppSettings>(option =>
+            {
+                option.BindNonPublicProperties = true;
+            });
         }
 
         private IConfiguration _configuration { get; }
@@ -29,7 +35,7 @@ namespace OrderFullfillment.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "FoodOrder", Version = "v1"});
             });
-            services.AddDbContext<AppDbContext>(options => options.UseSqlite(_configuration["ConnectionString"]));
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(AppSettings.ConnectionString));
 
             services
                 .AddScoped<IUnitOfWork, UnitOfWork>()
