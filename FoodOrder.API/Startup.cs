@@ -56,7 +56,7 @@ namespace OrderFullfillment.API
                 app.UseSwaggerUI(c =>
                 {
                     c.RoutePrefix = string.Empty;
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "OderFullfillment v1");
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "FoodOrder v1");
                 });
             }
 
